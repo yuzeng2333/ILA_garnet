@@ -1,10 +1,21 @@
-# ILA project template
+# Instrucion-Level Abstraction (ILA) of garnet
 
-To initialize the project with your customized name, run:
+This ILA model is derived based on the [garnet](https://github.com/StanfordAHA/garnet) design.
+Check their [license](https://github.com/StanfordAHA/garnet/blob/master/LICENSE) for further details.
+
+## Build
+
+To compile the ILA model and, for example, generate the Verilog file. Run
 
 ```bash
-python3 script/init.py <project_name>
+mkdir -p build && cd build
+cmake .. -DCMAKE_PREFIX_PATH=<ilang/install/dir>
+./garnet
 ```
+### Verilog
 
-This will generate the template ILA project. 
-The directory `template` can be removed afterward.
+The source code for Verilog is in: [garnet](https://github.com/StanfordAHA/garnet)
+
+### Contact
+
+If you have questions, please contact Yu Zeng yuzeng@princeton.edu

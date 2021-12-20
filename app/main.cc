@@ -22,3 +22,27 @@
 // SOFTWARE.
 // =============================================================================
 
+// File: main.cc
+
+#include <garnet/garnet_top.h>
+
+#include <fstream>
+#include <ilang/util/log.h>
+
+using namespace ilang;
+
+int main() {
+#if 0
+  auto garnet = GetGarnetIla("garnet");
+  std::ofstream fw("garnet.v");
+  garnet.ExportToVerilog(fw);
+  fw.close();
+#endif
+
+  auto memory_core = GetMemoryCoreIla("memory_core_ila");
+  std::ofstream fw("memory_core_ila.v");
+  memory_core.ExportToVerilog(fw);
+  fw.close();
+
+  return 0;
+}

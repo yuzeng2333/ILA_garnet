@@ -22,3 +22,20 @@
 // SOFTWARE.
 // =============================================================================
 
+// File: garnet_top.h
+
+#ifndef GARNET_GARNET_TOP_H__
+#define GARNET_GARNET_TOP_H__
+
+#include <ilang/ilang++.h>
+#include <string>
+
+namespace ilang {
+
+Ila GetGarnetIla(const std::string& model_name = "garnet");
+
+Ila GetMemoryCoreIla(const std::string& model_name = "memory_core");
+
+}; // namespace ilang
+
+#endif // GARNET_GARNET_TOP_H__
